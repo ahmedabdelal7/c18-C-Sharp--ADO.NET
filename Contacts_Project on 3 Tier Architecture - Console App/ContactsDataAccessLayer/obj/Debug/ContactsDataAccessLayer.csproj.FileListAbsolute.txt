@@ -1,0 +1,6 @@
+E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsDataAccessLayer\bin\Debug\ContactsDataAccessLayer.dll
+E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsDataAccessLayer\bin\Debug\ContactsDataAccessLayer.pdb
+E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsDataAccessLayer\obj\Debug\ContactsDataAccessLayer.csproj.AssemblyReference.cache
+E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsDataAccessLayer\obj\Debug\ContactsDataAccessLayer.csproj.CoreCompileInputs.cache
+E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsDataAccessLayer\obj\Debug\ContactsDataAccessLayer.dll
+E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsDataAccessLayer\obj\Debug\ContactsDataAccessLayer.pdb
