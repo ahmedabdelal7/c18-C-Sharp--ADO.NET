@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 namespace ContactsDataAccessLayer
@@ -117,6 +118,60 @@ namespace ContactsDataAccessLayer
             return ContactID;
         }
 
+
+        public static bool UpdateContact(int ID, string FirstName, string LastName, string Email, string Phone,
+            string Address, string ImagePath, DateTime DateOfBirth, int CountryID)
+        {
+            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+
+            int rowsAffectted = 0;
+
+            string Query = "UPDATE Contacts SET " +
+                "FirstName = @FirstName," +
+                "LastName = @LastName," +
+                "Email = @Email," +
+                "Phone = @Phone," +
+                "Address = @Address," +
+                "ImagePath = @ImagePath," +
+                "DateOfBirth = @DateOfBirth," +
+                "CountryID = @CountryID " +
+                "WHERE ContactID = @ID";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+            command.Parameters.AddWithValue("@FirstName", FirstName);
+            command.Parameters.AddWithValue("@LastName",LastName);
+            command.Parameters.AddWithValue("@Email", Email);
+            command.Parameters.AddWithValue("@Phone", Phone);
+            command.Parameters.AddWithValue("@Address", Address);
+            command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
+            command.Parameters.AddWithValue("@CountryID", CountryID);
+            command.Parameters.AddWithValue("@ID", ID);
+
+            if(ImagePath != "")
+                command.Parameters.AddWithValue("@ImagePath", ImagePath);
+            else
+                command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
+
+
+            try
+            {
+                connection.Open();
+                rowsAffectted =  command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error "+ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return rowsAffectted > 0;
+
+        }
     }
 
     internal static class DataAccessSettings

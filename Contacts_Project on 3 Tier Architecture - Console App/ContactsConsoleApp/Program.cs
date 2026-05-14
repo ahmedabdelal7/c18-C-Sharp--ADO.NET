@@ -50,10 +50,38 @@ namespace ContactsConsoleApp
 
         }
 
+        static void TestUpdateContact(int ID)
+        {
+            clsContact Contact1 = clsContact.Find(ID);
+
+            if(Contact1 != null)
+            {
+                Contact1.FirstName = "Samy";
+                Contact1.LastName = "Adil";
+                Contact1.Email = "sa@gmail.com";
+                Contact1.Phone = "0102214456";
+                Contact1.Address = "56 Dolly st";
+                Contact1.DateOfBirth = new DateTime(2000,1,2,8,0,0);
+                Contact1.ImagePath = "";
+                Contact1.CountryID = 3;
+
+
+                if (Contact1.Save()) {
+                    Console.WriteLine("Contact Updated Successfuly.");
+                }else
+                    Console.WriteLine("Faild to update contact!");
+
+            }else
+                Console.WriteLine("Contact is not found!");
+
+
+        }
         static void Main(string[] args)
         {
-            TestFindContact(9);
+            // TestFindContact(9);
             //TestAddNewContact();
+            TestUpdateContact(8);
+
             Console.ReadLine();
 
         }
