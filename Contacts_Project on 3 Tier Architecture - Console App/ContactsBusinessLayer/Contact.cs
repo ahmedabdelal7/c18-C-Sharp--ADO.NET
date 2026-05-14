@@ -67,7 +67,10 @@ namespace ContactsBusinessLayer
             }
 
         }
-
+        public static bool IsContatcExist(int ID)
+        {
+            return clsContactDataAccess.IsContactExist(ID);
+        }
         private bool _AddNewContact()
         {
             this.ID = clsContactDataAccess.AddNewContact(this.FirstName, this.LastName, this.Email,
@@ -80,17 +83,6 @@ namespace ContactsBusinessLayer
             return (clsContactDataAccess.UpdateContact(this.ID, this.FirstName, this.LastName, this.Email, this.Phone,
                 this.Address, this.ImagePath, this.DateOfBirth, this.CountryID));
         }
-
-        public static bool DeleteContact(int ID)
-        {
-            return (clsContactDataAccess.DeleteContact(ID));
-        }
-        public static DataTable GetAllContacts()
-        {
-            return clsContactDataAccess.GetAllContacts();
-        }
-
-
         public bool Save()
         {
             switch (this.Mode)
@@ -110,6 +102,14 @@ namespace ContactsBusinessLayer
 
             }
             return false;
+        }
+        public static bool DeleteContact(int ID)
+        {
+            return (clsContactDataAccess.DeleteContact(ID));
+        }
+        public static DataTable GetAllContacts()
+        {
+            return clsContactDataAccess.GetAllContacts();
         }
 
 

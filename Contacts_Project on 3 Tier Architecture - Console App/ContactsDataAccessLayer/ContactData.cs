@@ -237,6 +237,43 @@ namespace ContactsDataAccessLayer
             return dt;
 
         }
+
+        public static bool IsContactExist(int ID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+
+            string @query = @"SELECT Found = 1 FROM Contacts WHERE ContactID = @ID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@ID", ID);
+
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                    isFound = true;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+
+
+        }
     }
 
     internal static class DataAccessSettings

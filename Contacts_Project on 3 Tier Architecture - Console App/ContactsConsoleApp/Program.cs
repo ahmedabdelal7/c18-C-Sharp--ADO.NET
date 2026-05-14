@@ -79,11 +79,15 @@ namespace ContactsConsoleApp
 
         static void TestDeleteContact(int ID)
         {
-            if (clsContact.DeleteContact(ID))
+            if (clsContact.IsContatcExist(ID))
             {
-                Console.WriteLine("Contact Deleted Successfully.");
+                if (clsContact.DeleteContact(ID))
+                    Console.WriteLine("Contact Deleted Successfully.");
+                else Console.WriteLine("Faild To Delete Contact!");
+
             }
-            else Console.WriteLine("Faild To Delete Contact!");
+            else
+                Console.WriteLine("Faild, Because Contact Is Not Exists.");
         }
         static void TestListAllContacts()
         {
@@ -96,6 +100,14 @@ namespace ContactsConsoleApp
             }
         }
 
+        static void TestIsContactExist(int ID)
+        {
+            if (clsContact.IsContatcExist(ID))
+                Console.WriteLine("Yes, Contact Is Exists.");
+            else 
+                Console.WriteLine("No, Contact Is Not Exists.");
+        }
+
         static void Main(string[] args)
         {
             //TestFindContact(9);
@@ -104,7 +116,9 @@ namespace ContactsConsoleApp
 
             //TestDeleteContact(9);
 
-            TestListAllContacts();
+            //TestListAllContacts();
+
+            TestIsContactExist(5);
 
             Console.ReadLine();
 
