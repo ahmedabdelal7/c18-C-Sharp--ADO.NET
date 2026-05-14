@@ -85,6 +85,16 @@ namespace ContactsConsoleApp
             }
             else Console.WriteLine("Faild To Delete Contact!");
         }
+        static void TestListAllContacts()
+        {
+            DataTable dataTable = clsContact.GetAllContacts();
+                                            
+
+            foreach(DataRow row in dataTable.Rows)
+            {
+                Console.WriteLine($"{row["ContactID"]} - {row["FirstName"]} {row["LastName"]}");
+            }
+        }
 
         static void Main(string[] args)
         {
@@ -92,7 +102,9 @@ namespace ContactsConsoleApp
             //TestAddNewContact();
             //TestUpdateContact(8);
 
-            TestDeleteContact(9);
+            //TestDeleteContact(9);
+
+            TestListAllContacts();
 
             Console.ReadLine();
 

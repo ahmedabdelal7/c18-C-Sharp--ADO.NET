@@ -3,14 +3,14 @@
   "WorkspaceRootPath": "E:\\Course-18\\Contacts_Project on 3 Tier Architecture - Console App\\ContactsConsoleApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{36348CFA-3FEB-4B20-AD94-3F269A059124}|..\\ContactsDataAccessLayer\\ContactsDataAccessLayer.csproj|e:\\course-18\\contacts_project on 3 tier architecture - console app\\contactsdataaccesslayer\\contactdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBA48693-1B2C-4509-8463-17A99C9CB1C5}|ContactsConsoleApp-PresentationLayer.csproj|E:\\Course-18\\Contacts_Project on 3 Tier Architecture - Console App\\ContactsConsoleApp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBA48693-1B2C-4509-8463-17A99C9CB1C5}|ContactsConsoleApp-PresentationLayer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F93A92A8-7DBA-4446-A8B6-F53DDAB51E5E}|..\\ContactsBusinessLayer\\ContactsBusinessLayer.csproj|e:\\course-18\\contacts_project on 3 tier architecture - console app\\contactsbusinesslayer\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36348CFA-3FEB-4B20-AD94-3F269A059124}|..\\ContactsDataAccessLayer\\ContactsDataAccessLayer.csproj|e:\\course-18\\contacts_project on 3 tier architecture - console app\\contactsdataaccesslayer\\contactdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,7 +20,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -40,39 +40,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Course-18\\Contacts_Project on 3 Tier Architecture - Console App\\ContactsConsoleApp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\Course-18\\Contacts_Project on 3 Tier Architecture - Console App\\ContactsConsoleApp\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAzwE8AAAAaAAAA",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAAwGoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-14T20:21:36.068Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Contact.cs",
               "DocumentMoniker": "E:\\Course-18\\Contacts_Project on 3 Tier Architecture - Console App\\ContactsBusinessLayer\\Contact.cs",
               "RelativeDocumentMoniker": "..\\ContactsBusinessLayer\\Contact.cs",
               "ToolTip": "E:\\Course-18\\Contacts_Project on 3 Tier Architecture - Console App\\ContactsBusinessLayer\\Contact.cs",
               "RelativeToolTip": "..\\ContactsBusinessLayer\\Contact.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAQwF8AAAAtAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAA2wFcAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-14T14:34:42.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ContactData.cs",
               "DocumentMoniker": "E:\\Course-18\\Contacts_Project on 3 Tier Architecture - Console App\\ContactsDataAccessLayer\\ContactData.cs",
               "RelativeDocumentMoniker": "..\\ContactsDataAccessLayer\\ContactData.cs",
               "ToolTip": "E:\\Course-18\\Contacts_Project on 3 Tier Architecture - Console App\\ContactsDataAccessLayer\\ContactData.cs",
               "RelativeToolTip": "..\\ContactsDataAccessLayer\\ContactData.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwK8AAAAwAAAA",
+              "ViewState": "AQIAALAAAAAAAAAAAAA5wNQAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-14T15:45:01.489Z",
               "EditorCaption": ""

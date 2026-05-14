@@ -85,6 +85,11 @@ namespace ContactsBusinessLayer
         {
             return (clsContactDataAccess.DeleteContact(ID));
         }
+        public static DataTable GetAllContacts()
+        {
+            return clsContactDataAccess.GetAllContacts();
+        }
+
 
         public bool Save()
         {
