@@ -10,7 +10,7 @@ namespace ContactsBusinessLayer
 
         private enum enMode { AddNew, Update, Delete }
         enMode Mode;
-        public int ID { get;}
+        public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName {  get; set; }
         public string Email {  get; set; }
@@ -68,6 +68,30 @@ namespace ContactsBusinessLayer
 
         }
 
+        private bool _AddNewContact()
+        {
+            this.ID = clsContactDataAccess.AddNewContact(this.FirstName, this.LastName, this.Email,
+                this.Phone,this.Address, this.ImagePath, this.DateOfBirth, this.CountryID);
+
+            return (this.ID != -1);
+        }
+
+        public bool Save()
+        {
+            switch (this.Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewContact())
+                    {
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                        return false;   
+
+            }
+            return false;
+        }
 
 
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Runtime.Remoting.Messaging;
 using ContactsBusinessLayer;
 
 //Presentation Layer
@@ -28,12 +29,31 @@ namespace ContactsConsoleApp
             }
 
         }
+        static void TestAddNewContact() {
+            
+            clsContact contact = new clsContact();
 
-       
+            contact.FirstName = "Mahanad";
+            contact.LastName = "Ali";
+            contact.Email = "ma@gmail.com";
+            contact.Phone = "25444645";
+            contact.Address = "155 Abelaziz st";
+            contact.ImagePath = "";
+            contact.DateOfBirth = new DateTime(2004, 7, 7, 10, 0, 0);
+            contact.CountryID = 2;
+
+
+            if (contact.Save())
+            {
+                Console.WriteLine("Contact Added Successfully With ID {0}",contact.ID);
+            }
+
+        }
+
         static void Main(string[] args)
         {
-            TestFindContact(4); 
-
+            TestFindContact(9);
+            //TestAddNewContact();
             Console.ReadLine();
 
         }
