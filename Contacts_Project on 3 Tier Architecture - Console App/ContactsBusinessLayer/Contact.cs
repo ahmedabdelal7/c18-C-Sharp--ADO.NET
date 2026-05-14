@@ -81,6 +81,11 @@ namespace ContactsBusinessLayer
                 this.Address, this.ImagePath, this.DateOfBirth, this.CountryID));
         }
 
+        public static bool DeleteContact(int ID)
+        {
+            return (clsContactDataAccess.DeleteContact(ID));
+        }
+
         public bool Save()
         {
             switch (this.Mode)
