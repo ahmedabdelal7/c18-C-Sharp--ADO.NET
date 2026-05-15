@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Reflection;
-using System.Runtime.CompilerServices;
+
 
 namespace ContactsDataAccessLayer
 {
@@ -274,11 +273,9 @@ namespace ContactsDataAccessLayer
 
 
         }
-    }
 
-    internal static class DataAccessSettings
-    {
-        public static string connectionString = "Server=.;Database=ContactsDB;User Id=sa;Password=123456;";
+        
 
     }
+
 }
