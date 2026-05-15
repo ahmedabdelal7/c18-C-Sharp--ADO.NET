@@ -10,7 +10,7 @@ namespace ContactsDataAccessLayer
         public static bool GetContactInfoByID(int ID, ref string FirstName, ref string LastName, ref string Email,
             ref string Phone, ref string Address, ref string ImagePath, ref DateTime DateOfBirth, ref int CountryID)
         {
-            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
             string Query = @"select * from Contacts where ContactID = @ContactID";
 
@@ -71,7 +71,7 @@ namespace ContactsDataAccessLayer
         public static int AddNewContact(string FirstName, string LastName, string Email, string Phone,
             string Address, string ImagePath, DateTime DateOfBirth, int CountryID)
         {
-            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
             int ContactID = -1;
             string @Query =
                 @"INSERT INTO Contacts (FirstName,LastName,Email,Phone,Address,ImagePath,DateOfBirth,CountryID)" +
@@ -122,7 +122,7 @@ namespace ContactsDataAccessLayer
         public static bool UpdateContact(int ID, string FirstName, string LastName, string Email, string Phone,
             string Address, string ImagePath, DateTime DateOfBirth, int CountryID)
         {
-            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
             int rowsAffectted = 0;
 
@@ -177,7 +177,7 @@ namespace ContactsDataAccessLayer
         {
             int rowsAffectted = 0;
 
-            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
             string @Query = "delete from Contacts where ContactID = @ID";
 
@@ -207,7 +207,7 @@ namespace ContactsDataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
             string @Query = "SELECT * FROM Contacts";
 
@@ -241,7 +241,7 @@ namespace ContactsDataAccessLayer
         {
             bool isFound = false;
 
-            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
             string @query = @"SELECT Found = 1 FROM Contacts WHERE ContactID = @ID";
 

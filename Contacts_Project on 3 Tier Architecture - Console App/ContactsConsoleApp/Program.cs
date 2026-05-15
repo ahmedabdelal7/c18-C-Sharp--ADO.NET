@@ -111,12 +111,14 @@ namespace ContactsConsoleApp
         //Test Country
         static void TestFindCountryByID(int ID)
         {
-            clsCountry country = clsCountry.FindCountryByID(ID);
+            clsCountry country1 = clsCountry.FindCountryByID(ID);
 
-            if (country != null)
+            if (country1 != null)
             {
-                Console.WriteLine($"Country ID   : {ID}");
-                Console.WriteLine($"Country Name : {country.CountryName}");
+                Console.WriteLine($"Country ID   : {country1.ID}");
+                Console.WriteLine($"Country Name : {country1.CountryName}");
+                Console.WriteLine($"Country Code : {country1.CountryCode}");
+                Console.WriteLine($"Phone Code   : {country1.PhoneCode}");
             }
             else Console.WriteLine("Country Not Founded!");
         }
@@ -128,14 +130,18 @@ namespace ContactsConsoleApp
             {
                 Console.WriteLine($"Country ID   : {country1.ID}");
                 Console.WriteLine($"Country Name : {country1.CountryName}");
+                Console.WriteLine($"Country Code : {country1.CountryCode}");
+                Console.WriteLine($"Phone Code   : {country1.PhoneCode}");
             }
             else Console.WriteLine("Country Not Founded!");
         }
-        static void TestAddNewCountry(string CountryName)
+        static void TestAddNewCountry()
         {
             clsCountry country = new clsCountry();
 
-            country.CountryName = CountryName;
+            country.CountryName = "Qatar";
+            country.CountryCode = "122";
+            //country.PhoneCode = "";
 
             if (country.Save())
             {
@@ -151,6 +157,9 @@ namespace ContactsConsoleApp
             if(country != null)
             {
                 country.CountryName = "Dobai";
+                country.CountryCode = "";
+                country.PhoneCode = "20";
+
                 if (country.Save())
                 {
                     Console.WriteLine("Country Updated Successfully.");
@@ -182,7 +191,7 @@ namespace ContactsConsoleApp
             {
                 foreach (DataRow row in dt.Rows)
                 {
-                    Console.WriteLine($"Country {row["CountryID"]} - {row["CountryName"]}");
+                    Console.WriteLine($"Country {row["CountryID"]} - {row["CountryName"]}, {row["CountryCode"]}, {row["PhoneCode"]}");
                 }
             }
             else
@@ -192,12 +201,13 @@ namespace ContactsConsoleApp
         }
         static void Main(string[] args)
         {
-            //TestFindCountryByID(1);
-            //TestFindCountryByName("Canada");
-            //TestAddNewCountry("Moroco");
-            //TestUpdateCountry(7);
+            //TestFindCountryByID(6);
+            //TestFindCountryByName("Qatar");
+            //TestAddNewCountry();
+            //TestUpdateCountry(6);
             //TestDeleteCountry(7);
             TestListAllCountries();
+
             Console.ReadLine();
 
         }

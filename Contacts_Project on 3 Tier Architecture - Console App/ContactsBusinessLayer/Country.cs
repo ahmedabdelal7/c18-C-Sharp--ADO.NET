@@ -10,25 +10,33 @@ namespace ContactsBusinessLayer
         enMode Mode;
         public int ID { get; set; }
         public string CountryName { get; set; }
-        private clsCountry(int ID, string CountryName)
+        public string CountryCode { get; set; }
+        public string PhoneCode {  get; set; }
+        private clsCountry(int ID, string CountryName,string CountryCode,string PhoneCode )
         {
             this.ID = ID;
             this.CountryName = CountryName;
+            this.CountryCode = CountryCode;
+            this.PhoneCode = PhoneCode;
             Mode = enMode.Update;
         }
         public clsCountry()
         {
             this.ID = -1;
             this.CountryName = "";
+            this.CountryCode = "";
+            this.PhoneCode = "";
 
             Mode = enMode.AddNew;
         }
         public static clsCountry FindCountryByID(int ID)
         {
             string CountryName = "";
-            if (clsCountryDataAccess.GetCountryInfoByID(ID, ref CountryName))
+            string CountryCode = "";
+            string PhoneCode = "";
+            if (clsCountryDataAccess.GetCountryInfoByID(ID, ref CountryName, ref  CountryCode, ref  PhoneCode))
             {
-                return new clsCountry(ID, CountryName);
+                return new clsCountry(ID, CountryName, CountryCode, PhoneCode);
 
             }
             else return null;
@@ -36,22 +44,23 @@ namespace ContactsBusinessLayer
         public static clsCountry FindCountryByName(string CountryName)
         {
             int CountryID = -1;
-
-            if (clsCountryDataAccess.GetCountryInfoByName(ref CountryID, CountryName))
+            string CountryCode = "";
+            string PhoneCode = "";
+            if (clsCountryDataAccess.GetCountryInfoByName(ref CountryID, CountryName, ref CountryCode, ref PhoneCode))
             {
-                return new clsCountry(CountryID, CountryName);
+                return new clsCountry(CountryID, CountryName, CountryCode, PhoneCode);
 
             }
             else return null;
         }
         private bool _AddNewCountry()
         {
-            this.ID = clsCountryDataAccess.AddNewCountry(this.CountryName);
+            this.ID = clsCountryDataAccess.AddNewCountry(this.CountryName, this.CountryCode, this.PhoneCode);
             return ID > 0;
         }
         private bool _UpdateCountry()
         {
-            return clsCountryDataAccess.UpdateCountry(this.ID, this.CountryName);
+            return clsCountryDataAccess.UpdateCountry(this.ID, this.CountryName, this.CountryCode,this.PhoneCode);
         }
         public bool Save()
         {
