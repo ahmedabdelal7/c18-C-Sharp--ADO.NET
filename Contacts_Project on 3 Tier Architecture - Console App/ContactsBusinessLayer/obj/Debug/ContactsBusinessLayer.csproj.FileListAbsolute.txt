@@ -1,9 +1,0 @@
-E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsBusinessLayer\bin\Debug\ContactsBusinessLayer.dll
-E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsBusinessLayer\bin\Debug\ContactsBusinessLayer.pdb
-E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsBusinessLayer\obj\Debug\ContactsBusinessLayer.csproj.AssemblyReference.cache
-E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsBusinessLayer\obj\Debug\ContactsBusinessLayer.csproj.CoreCompileInputs.cache
-E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsBusinessLayer\obj\Debug\ContactsBusinessLayer.dll
-E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsBusinessLayer\obj\Debug\ContactsBusinessLayer.pdb
-E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsBusinessLayer\bin\Debug\ContactsDataAccessLayer.dll
-E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsBusinessLayer\bin\Debug\ContactsDataAccessLayer.pdb
-E:\Course-18\Contacts_Project on 3 Tier Architecture - Console App\ContactsBusinessLayer\obj\Debug\Contacts.DFB66D76.Up2Date
