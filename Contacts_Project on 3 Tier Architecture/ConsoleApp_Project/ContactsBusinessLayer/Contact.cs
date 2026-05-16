@@ -74,14 +74,14 @@ namespace ContactsBusinessLayer
         private bool _AddNewContact()
         {
             this.ID = clsContactDataAccess.AddNewContact(this.FirstName, this.LastName, this.Email,
-                this.Phone,this.Address, this.ImagePath, this.DateOfBirth, this.CountryID);
+                this.Phone ,this.ImagePath, this.Address, this.DateOfBirth, this.CountryID);
 
             return (this.ID != -1);
         }
         private bool _UpdateContact()
         {
             return (clsContactDataAccess.UpdateContact(this.ID, this.FirstName, this.LastName, this.Email, this.Phone,
-                this.Address, this.ImagePath, this.DateOfBirth, this.CountryID));
+                this.ImagePath, this.Address, this.DateOfBirth, this.CountryID));
         }
         public bool Save()
         {

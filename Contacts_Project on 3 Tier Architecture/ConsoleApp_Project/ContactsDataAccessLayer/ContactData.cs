@@ -8,7 +8,7 @@ namespace ContactsDataAccessLayer
     public static class clsContactDataAccess
     {
         public static bool GetContactInfoByID(int ID, ref string FirstName, ref string LastName, ref string Email,
-            ref string Phone, ref string Address, ref string ImagePath, ref DateTime DateOfBirth, ref int CountryID)
+            ref string Phone, ref string ImagePath, ref string Address, ref DateTime DateOfBirth, ref int CountryID)
         {
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
@@ -69,7 +69,7 @@ namespace ContactsDataAccessLayer
         }
 
         public static int AddNewContact(string FirstName, string LastName, string Email, string Phone,
-            string Address, string ImagePath, DateTime DateOfBirth, int CountryID)
+             string ImagePath , string Address, DateTime DateOfBirth, int CountryID)
         {
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
             int ContactID = -1;
@@ -120,7 +120,7 @@ namespace ContactsDataAccessLayer
 
 
         public static bool UpdateContact(int ID, string FirstName, string LastName, string Email, string Phone,
-            string Address, string ImagePath, DateTime DateOfBirth, int CountryID)
+             string ImagePath, string Address, DateTime DateOfBirth, int CountryID)
         {
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
