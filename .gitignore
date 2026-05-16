@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 0
 .$*
+!bin/
